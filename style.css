@@ -1,65 +1,57 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 body {
-	background: url(background.png) repeat-x white;
-	text-align: center;
+    background: url(./img/background.png) repeat-x white;
+    text-align: center;
+    padding-top: 100px;
 }
 
 h1 {
-	font: 900 90px/200px "Myriad Pro", sans-serif;
-	color: black;
+    font: 900 90px/200px "Myriad Pro", sans-serif;
+    color: black;
 }
-/*
-h1:hover {
-	text-shadow: 0 0 10px turquoise;
-}*/
 
 h2 {
-	font:900 50px/100px "Trebuchet MS", sans-serif;
-	color: white;
+    font: 900 50px/100px "Trebuchet MS", sans-serif;
+    color: white;
 }
 
-table {
+#countdown {
+    display: inline-block;
 }
 
-div#countdown {
-	text-align: center;
+.number_container {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    width: 70px;
 }
 
-div.number_container {
-	vertical-align: middle;
-	display: inline-block;
-	position: relative;
-	height: 100px;
-	width: 70px;
+.colon {
+    font: 900 70px/70px "Times New Roman", sans-serif;
+    color: rgb(20, 20, 20);
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    vertical-align: middle;
 }
 
-div.number_container:nth-child(2) {
-	margin: 0 50px 0 0;
+.space {
+    display: inline-block;
+    width: 2em;
 }
 
-span.colon{
-	font: 900 70px/70px "Times New Roman", sans-serif;
-	color: rgb(20,20,20);
-	margin: 0px 5px 0 5px;
-	position: relative;
-	top: 10px;
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
 }
 
-img{
-	position: absolute;
-
-	width: 70px;
-}
-
-img.up {
-	
-}
-
-img.down {
-	top: 50px;
+.down {
+    top: 50px;
 }
