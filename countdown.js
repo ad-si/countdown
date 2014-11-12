@@ -6,28 +6,54 @@
 	    move = [],
 	    size = [],
 	    newValue,
-	    oldValue
+	    oldValue,
+		date
 
-	window.countdownTo = function () {
+	window.countdownTo = function (_date) {
+		
+		var to_year,
+			to_month,
+			to_day,
+			to_hour,
+			to_minute,
+			to_second,
+			Sekunden,
+			now,
+			countdown,
+			milliseconds,
+			Rest,
+			Tage,
+			Stunden,
+			CountdownText,
+			Minuten,
+			countdownNumber
+		
+		
+		date = date || new Date(_date),
 
-		var Sekunden,
-		    to_year = 2014,
-		    to_month = 5,
-		    to_day = 25,
-		    to_hour = 0,
-		    to_minute = 0,
-		    to_second = 0,
+		to_year = date.getFullYear(),
+		to_month = date.getMonth() + 1,
+		to_day = date.getDay(),
+		to_hour = date.getHours(),
+		to_minute = date.getMinutes(),
+		to_second = date.getSeconds(),
+		Sekunden,
 
-		    now = new Date(),
-		    countdown = new Date(to_year, to_month - 1, to_day, to_hour, to_minute, to_second),
-		    milliseconds = countdown.getTime() - now.getTime(),
-		    Rest = milliseconds,
-		    Tage = Math.floor(Rest / 86400000),
-		    Stunden,
-		    CountdownText = "",
-		    Minuten,
-		    countdownNumber
+		now = new Date(),
+		countdown = new Date(to_year, to_month - 1, to_day, to_hour, to_minute, to_second),
+		milliseconds = countdown.getTime() - now.getTime(),
+		Rest = milliseconds,
+		Tage = Math.floor(Rest / 86400000),
+		Stunden,
+		CountdownText = "",
+		Minuten,
+		countdownNumber
+		
+		console.log(date);
 
+		console.log(to_year, to_month, to_day,
+				to_hour, to_minute, to_second)
+			
 
 		Rest = milliseconds % 86400000
 
