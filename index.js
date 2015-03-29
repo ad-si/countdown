@@ -1,3 +1,3 @@
 !function(){
-	countdownTo('2014-12-20T20:00')
+	countdownTo('2020-01-01T00:00')
 }()
